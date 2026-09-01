@@ -39,6 +39,14 @@ p, ul, ol {
 ul, ol {
 }
 
+.paper-list > li {
+	margin-bottom: 10px;
+}
+
+.paper-list > li > ul > li {
+	margin-bottom: 5px;
+}
+
 a {
 	text-decoration: none;
 	border-bottom: 1px dotted #999999;

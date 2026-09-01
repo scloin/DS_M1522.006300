@@ -35,6 +35,7 @@ Released   : 20090809
         <ul>
           <li><a href="#course_information">Course In</a></li>
           <li><a href="#objectives">Objectives</a></li>
+          <li><a href="#reading_materials">Reading Materials</a></li>
           <li><a href="#schedule">Schedule</a></li>
           <li><a href="#grading_policy">Grading Policy</a></li>
           <!--<li><a href="http://dcslab.snu.ac.kr/xe/?mid=project2">Class board</a></li>-->
@@ -107,6 +108,268 @@ Released   : 20090809
           <b>&nbsp;목표</b><br />
             본 교과목은 분산 컴퓨팅 환경에서 데이터를 활용한 가치 창출을 위한 사용자 요구를 충족하기 위해, 데이터를 효율적으로 전송·처리·보호하는 분산 시스템 연구의 기본 원리와 핵심 개념을 학습하는 것을 목표로 한다. 이를 위해 수강생들은 효과적이고 효율적인 데이터 보호, 처리, 전송 및 성능 공학을 포함한 분산 시스템의 주요 연구 이슈를 심층적으로 이해하고 관련 기술을 습득함으로써, AI 시대의 분산 컴퓨팅 환경에서 요구되는 핵심 기술을 연구·개발할 수 있는 연구 역량을 함양한다.
         </li>
+        <li>
+            <b>&nbsp;Objectives</b><br />
+            The main goal of this course is to study the basics of research regarding distributed systems that transmit, process, and protect data efficiently in order to meet the user requirements of value creation via using data in distributed computing environments. Students learn how to perform research to develop technologies needed in such environments in the AI era, by deeply understanding major distributed systems issues regarding effective, efficient data protection, processing, & transmission and performance engineering, and by obtaining relevant skills.
+        </li>
+      </ul>
+      <hr />
+      <p>
+        <b
+          ><font size="5"
+            ><a name="reading_materials" id="reading_materials"
+              >Reading Materials</a
+            ></font
+          ></b
+        >
+      </p>
+      <ul>
+        <li>
+          <b
+            >Papers marked with "*" are backup papers, and papers marked
+            with "?" can be replaced.</b
+          >
+        </li>
+      </ul>
+      <ul class="paper-list">
+        <li>
+          <strong>Toward Scalability Experiments for AI Models</strong>
+          <ul>
+            <li>
+              <b>[0]</b> B. Yuan, Y. He, J. Q. Davis, T. Zhang, T. Dao, B.
+              Chen, P. Liang, C. R&eacute;, and C. Zhang,
+              <a
+                href="./papers/0_NeurIPS22_Yuan_DecentralizedTraining.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >"Decentralized Training of Foundation Models in Heterogeneous
+                Environments"</a
+              >, Advances in Neural Information Processing Systems 35 (NeurIPS
+              2022).
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Distributed Shared Memory (DSM)</strong>
+          <ul>
+            <li>
+              <b>[1]</b> K. Li and P. Hudak,
+              <a
+                href="./papers/1_TOCS89_Li_MemoryCoherence.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >"Memory Coherence in Shared Virtual Memory Systems"</a
+              >, ACM Transactions on Computer Systems (TOCS), Vol. 7, No. 4,
+              November 1989, pp. 321&ndash;359.
+            </li>
+            <li>
+              * <b>[2]</b> X. Wang, Y. Li, K. Wu, W. Zhu, Y. Li, and Y. Xu,
+              <a
+                href="./papers/2_OSDI25_Wang_FineMem.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >"FineMem: Breaking the Allocation Overhead vs. Memory Waste
+                Dilemma in Fine-Grained Disaggregated Memory Management"</a
+              >, 19th USENIX Symposium on Operating Systems Design and
+              Implementation (OSDI 25), 2025, pp. 57&ndash;74.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>DSM &amp; CXL</strong>
+          <ul>
+            <li>
+              <b>[2]</b> G. Huang, H. Litz, and Y. Xu,
+              <a
+                href="./papers/2_ASPLOS26_Huang_PIPM.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >"PIPM: Partial and Incremental Page Migration for Multi-host
+                CXL Disaggregated Shared Memory"</a
+              >, 31st ACM International Conference on Architectural Support for
+              Programming Languages and Operating Systems (ASPLOS 2026), Vol. 2, pp. 1445&ndash;1460
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Storage</strong>
+          <ul>
+            <li>
+              <b>[3]</b> S. Ghemawat, H. Gobioff, and S.-T. Leung,
+              <a
+                href="./papers/3_SOSP03_Ghemawat_GFS.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >"The Google File System"</a
+              >, 19th ACM Symposium on Operating Systems Principles (SOSP),
+              2003, pp. 29&ndash;43.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Storage Tiering</strong>
+          <ul>
+            <li>
+              <b>[4]</b> K. Tu, K. Wu, A. C. Arpaci-Dusseau, and R. H.
+              Arpaci-Dusseau,
+              <a
+                href="./papers/4_FAST26_Tu_MOST.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >"Getting the MOST out of Your Storage Hierarchy with
+                Mirror-Optimized Storage Tiering"</a
+              >, 24th USENIX Conference on File and Storage Technologies (FAST
+              26), 2026, pp. 561&ndash;578.
+            </li>
+            <li>
+              <b>[5]</b> Y. Wei, D. Trautwein, Y. Psaras, I. Castro, W. Scott,
+              A. Raman, and G. Tyson,
+              <a
+                href="./papers/5_NSDI24_Wei_IPFS.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >"The Eternal Tussle: Exploring the Role of Centralization in
+                IPFS"</a
+              >, 21st USENIX Symposium on Networked Systems Design and
+              Implementation (NSDI 24), 2024, pp. 441&ndash;454.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Utilizing SSDs for DNN Training</strong>
+          <ul>
+            <li>
+              * <b>[6]</b> J. Bae, J. Lee, Y. Jin, S. Son, S. Kim, H. Jang, T. J.
+              Ham, and J. W. Lee,
+              <a
+                href="./papers/6_FAST21_Bae_FlashNeuron.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >"FlashNeuron: SSD-Enabled Large-Batch Training of Very Deep
+                Neural Networks"</a
+              >, 19th USENIX Conference on File and Storage Technologies (FAST
+              21), 2021, pp. 387&ndash;401.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Multi-GPU Systems with UVM</strong>
+          <ul>
+            <li>
+              ? <b>[6]</b> S. Choi, T. Kim, J. Jeong, R. Ausavarungnirun, M.
+              Jeon, Y. Kwon, and J. Ahn,
+              <a
+                href="./papers/6_ATC22_Choi_HUVM.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >"Memory Harvesting in Multi-GPU Systems with Hierarchical
+                Unified Virtual Memory"</a
+              >, 2022 USENIX Annual Technical Conference (USENIX ATC 22), pp.
+              625&ndash;638.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Zero-Copy KV Cache</strong>
+          <ul>
+            <li>
+              * <b>[6]</b> S. Luo and H. Shen,
+              <a
+                href="./papers/6_OSDI26_Luo_DirectKV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >"No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache
+                Offloading for Long-Context LLMs"</a
+              >, 20th USENIX Symposium on Operating Systems Design and
+              Implementation (OSDI 26), 2026, pp. 39–54
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Information Protection</strong>
+          <ul>
+            <li>
+              <b>[7]</b> E. H. Spafford,
+              <a
+                href="./papers/7_CACM89_Spafford_CrisisAftermath.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >"The Internet Worm: Crisis and Aftermath"</a
+              >, Communications of the ACM (CACM), Vol. 32, No. 6, June 1989,
+              pp. 678&ndash;687.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Distributed Framework</strong>
+          <ul>
+            <li>
+              <b>[8]</b> M. Abadi et al.,
+              <a
+                href="./papers/8_OSDI16_Abadi_TensorFlow.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >"TensorFlow: A System for Large-Scale Machine Learning"</a
+              >, 12th USENIX Symposium on Operating Systems Design and
+              Implementation (OSDI 16), 2016, pp. 265&ndash;283.
+            </li>
+            <li>
+              <b>[9]</b> S. Arnautov et al.,
+              <a
+                href="./papers/9_OSDI16_Arnautov_SCONE.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >"SCONE: Secure Linux Containers with Intel SGX"</a
+              >, 12th USENIX Symposium on Operating Systems Design and
+              Implementation (OSDI 16), 2016, pp. 689&ndash;703.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Distributed Framework for AI Apps</strong>
+          <ul>
+            <li>
+              <b>[10]</b> P. Moritz, R. Nishihara, S. Wang, A. Tumanov, R.
+              Liaw, E. Liang, M. Elibol, Z. Yang, W. Paul, M. I. Jordan, and I.
+              Stoica,
+              <a
+                href="./papers/10_OSDI18_Moritz_Ray.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >"Ray: A Distributed Framework for Emerging AI
+                Applications"</a
+              >, 13th USENIX Symposium on Operating Systems Design and
+              Implementation (OSDI 18), 2018, pp. 561&ndash;577.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Blockchain</strong>
+          <ul>
+            <li>
+              ? <b>[11]</b> J. Wang and H. Wang,
+              <a
+                href="./papers/11_NSDI19_Wang_Monoxide.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >"Monoxide: Scale out Blockchains with Asynchronous Consensus
+                Zones"</a
+              >, 16th USENIX Symposium on Networked Systems Design and
+              Implementation (NSDI 19), 2019, pp. 95&ndash;112.
+            </li>
+          </ul>
+        </li>
       </ul>
       <hr />
       <p>
@@ -118,7 +381,8 @@ Released   : 20090809
       </p>
       <ul>
         <li>
-          <b>&nbsp;일정은 상황에 따라 변경될 수 있으니 상시 체크 바랍니다</b
+          <b>&nbsp;일정은 상황에 따라 변경될 수 있으니 상시 체크 바랍니다</b><br>
+            <b>&nbsp;The schedule is subject to change.</b
           ><br />
         </li>
       </ul>
@@ -128,10 +392,10 @@ Released   : 20090809
     <td width="150" align="center" bgcolor="#000000">
       <b> 날짜 </b>
     </td>
-    <td width="300" align="center" bgcolor="#000000">
+    <td width="250" align="center" bgcolor="#000000">
       <b> 수업내용 </b>
     </td>
-    <td width="210" align="center" bgcolor="#000000">
+    <td width="110" align="center" bgcolor="#000000">
       <b> 수업방법 </b>
     </td>
     <td align="center" bgcolor="#000000">
@@ -143,154 +407,173 @@ Released   : 20090809
     <td>
       &nbsp;오리엔테이션 및 팀 구성<br>
       &nbsp;분산 시스템 기본 원리<br>
-      &nbsp;<i>Introduction</i>
+      &nbsp;Fundamentals of Distributed Systems
     </td>
-    <td>&nbsp;강의 및 팀 구성</td>
-    <td>&nbsp;</td>
+    <td>&nbsp;강의 및 팀 구성</td><br>
+    <td>&nbsp;<i>Introduction</i></td>
   </tr>
 
   <tr>
     <td>&nbsp;2주차 (9/9, 9/14)</td>
     <td>
       &nbsp;분산 시스템 기본 원리<br>
-      &nbsp;<i>Introduction and Architectures</i>
+      &nbsp;Fundamentals of Distributed Systems
     </td>
     <td>&nbsp;강의</td>
-    <td>&nbsp;</td>
+    <td>&nbsp;<i>Introduction and Architectures</i></td>
   </tr>
 
   <tr>
     <td>&nbsp;3주차 (9/16, 9/21)</td>
     <td>
       &nbsp;동적 자원 관리 시스템 I<br>
-      &nbsp;<i>Processes, Virtualization, and Server Clusters</i>
+      &nbsp;Dynamic Resource Management Systems I
     </td>
     <td>&nbsp;강의</td>
-    <td>&nbsp;</td>
+    <td>&nbsp;<i>Processes, Virtualization, and Server Clusters</i></td>
   </tr>
 
   <tr>
     <td>&nbsp;4주차 (9/23, 9/28)</td>
     <td>
       &nbsp;분산 메모리/파일 시스템 I<br>
-      &nbsp;<i>Communication and Distributed Shared Memory</i>
+      &nbsp;Distributed Memory/File Systems I
     </td>
     <td>&nbsp;강의</td>
-    <td>&nbsp;</td>
+    <td>&nbsp;<i>Communication and Distributed Shared Memory</i></td>
   </tr>
 
   <tr>
     <td>&nbsp;5주차 (9/30, 10/5)</td>
     <td>
       &nbsp;P2P 컴퓨팅 시스템<br>
-      &nbsp;<i>Peer-to-Peer Systems and Naming</i>
+      &nbsp;Peer-to-Peer Computing Systems
     </td>
     <td>&nbsp;강의</td>
-    <td>&nbsp;</td>
+    <td>&nbsp;<i>Peer-to-Peer Systems and Naming</i></td>
   </tr>
 
   <tr>
     <td>&nbsp;6주차 (10/7, 10/12)</td>
     <td>
       &nbsp;다른 분산 시스템 이슈들 I<br>
-      &nbsp;<i>Coordination and Synchronization</i>
+      &nbsp;Other Distributed Systems Issues
     </td>
     <td>&nbsp;강의</td>
-    <td>&nbsp;실험 환경(자원) 배분</td>
+    <td>&nbsp;<i>Coordination and Synchronization</i>
+        <br>&nbsp;<b>Project :실험 환경(자원) 배분</b>
+    </td>
   </tr>
 
   <tr>
     <td>&nbsp;7주차 (10/14, 10/19)</td>
     <td>
       &nbsp;분산 메모리/파일 시스템 II<br>
-      &nbsp;<i>Consistency and Replication</i>
+      &nbsp;Distributed Memory/File Systems II
     </td>
     <td>&nbsp;강의</td>
-    <td>&nbsp;</td>
+    <td>&nbsp;<i>Consistency and Replication</i></td>
   </tr>
 
   <tr>
     <td>&nbsp;8주차 (10/21, 10/26)</td>
     <td>
       &nbsp;다른 분산 시스템 이슈들 II<br>
-      &nbsp;<i>Fault Tolerance</i>
+      &nbsp;Other Distributed Systems Issues II
     </td>
     <td>&nbsp;강의 및 논문 발표</td>
-    <td>&nbsp;</td>
+    <td>&nbsp;<i>Fault Tolerance</i></td>
   </tr>
 
   <tr>
     <td>&nbsp;9주차 (10/28, 11/2)</td>
     <td>
       &nbsp;정보 보호 시스템<br>
-      &nbsp;<i>Security</i>
+      &nbsp;Information Protection Systems<br>
     </td>
     <td>&nbsp;강의 및 논문 발표</td>
-    <td>&nbsp;</td>
+    <td>&nbsp;<i>Security</i></td>
   </tr>
 
   <tr>
     <td>&nbsp;10주차 (11/4, 11/9)</td>
     <td>
       &nbsp;성능 공학 및 동적 적응<br>
+      &nbsp;Performance Engineering & Dynamic Adaptation
     </td>
     <td>&nbsp;강의 및 논문 발표</td>
-    <td>&nbsp;</td>
+    <td>&nbsp;<i>Performance Engineering and Dynamic Adaptation</i></td>
   </tr>
 
   <tr>
     <td>&nbsp;11주차 (11/11, 11/16)</td>
     <td>
       &nbsp;동적 자원 관리 시스템 II<br>
+      &nbsp;Dynamic Resource Management Systems II
     </td>
     <td>&nbsp;강의 및 논문 발표</td>
-    <td>&nbsp;</td>
+    <td>&nbsp;<i>Dynamic Resource Management</i></td>
   </tr>
 
   <tr>
     <td>&nbsp;12주차 (11/18, 11/23)</td>
     <td>
       &nbsp;클라우드 컴퓨팅 시스템 이슈들<br>
+      &nbsp;Cloud Computing Systems Issues
     </td>
     <td>&nbsp;강의 및 논문 발표</td>
-    <td>&nbsp;</td>
+    <td>&nbsp;<i>Cloud Computing Systems</i></td>
   </tr>
 
-  <tr>
-    <td>&nbsp;13주차 (11/25, 11/30)</td>
-    <td>
-      &nbsp;AI 및 블록체인 시스템<br>
-    </td>
-    <td>&nbsp;강의 및 논문 발표</td>
-    <td>&nbsp;</td>
-  </tr>
+<tr>
+  <td>&nbsp;13주차 (11/25, 11/30)</td>
+  <td>
+    &nbsp;AI 및 블록체인 시스템<br>
+    &nbsp;AI & Blockchain Systems
+  </td>
+  <td>
+    &nbsp;강의 및 논문 발표<br>
+  </td>
+  <td>&nbsp;<i>Artificial Intelligence and Blockchain Systems</i></td>
+</tr>
 
-  <tr>
-    <td>&nbsp;14주차 (12/2, 12/7)</td>
-    <td>
-      &nbsp;프로젝트 결과 분석 및 통합<br>
-    </td>
-    <td>&nbsp;강의 및 논문 발표</td>
-    <td>&nbsp;</td>
-  </tr>
+<tr>
+  <td>&nbsp;14주차 (12/2, 12/7)</td>
+  <td>
+    &nbsp;프로젝트 결과 분석 및 통합<br>
+    &nbsp;Project Analysis and Integration
+  </td>
+  <td>
+    &nbsp;강의 및 논문 발표<br>
+  </td>
+  <td>&nbsp;<i>Project Analysis and Integration</i></td>
+</tr>
 
-  <tr>
-    <td>&nbsp;15주차 (12/9, 12/14)</td>
-    <td>
-      &nbsp;최종 프로젝트 발표 및 종합<br>
-    </td>
-    <td>&nbsp;강의 및 논문 발표</td>
-    <td>&nbsp;</td>
-  </tr>
+<tr>
+  <td>&nbsp;15주차 (12/9, 12/14)</td>
+  <td>
+    &nbsp;최종 프로젝트 발표 및 종합<br>
+    &nbsp;Final Project Presentation and Summary
+  </td>
+  <td>
+    &nbsp;강의 및 논문 발표<br>
+  </td>
+  <td>&nbsp;<i>Final Project Presentation and Summary</i></td>
+</tr>
 
-  <tr>
-    <td>&nbsp;보강 주 (12/15, 12/21)</td>
-    <td>
-      &nbsp;보강 및 프로젝트 피드백<br>
-    </td>
-    <td>&nbsp;보강 및 피드백</td>
-    <td>&nbsp;필요시 운영</td>
-  </tr>
+<tr>
+  <td>&nbsp;보강 주 (12/15, 12/21)</td>
+  <td>
+    &nbsp;보강 및 프로젝트 피드백<br>
+    &nbsp;Make-up Classes & Project Feedback
+  </td>
+  <td>
+    &nbsp;보강 및 피드백<br>
+  </td>
+  <td>
+    &nbsp;필요시 운영<br>
+  </td>
+</tr>
 
 </table>
       </blockquote>
@@ -329,6 +612,10 @@ Released   : 20090809
         <li>
           <b>&nbsp;팀 프로젝트</b><br />
             분산시스템 분야의 연구 논문을 분석하고, 논문에서 제시한 핵심 기법을 기반으로 시스템을 설계·구현한다. 프로젝트 프로포절을 통해 연구 목표와 구현 계획을 구체화하며, 최종 발표에서는 구현 결과와 실험적 성능 평가를 제시한다.
+        </li>
+        <li>
+          <b>&nbsp;Team Project</b><br />
+            Students will analyze research papers in the field of distributed systems and design and implement systems based on the key techniques presented in those papers. They will specify their research objectives and implementation plans through a project proposal, and in their final presentation, they will present the results of their implementation and an experimental performance evaluation.
         </li>
       </ul>
 
