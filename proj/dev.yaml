@@ -1,0 +1,36 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: dev
+spec:
+  backoffLimit: 0
+  template:
+    spec:
+      runtimeClassName: nvidia
+      restartPolicy: Never
+      containers:
+        - name: dev
+          image: docker.io/pytorch/pytorch:2.4.1-cuda12.1-cudnn9-runtime
+          imagePullPolicy: IfNotPresent
+          workingDir: /workspace
+          command:
+            - /bin/bash
+            - -lc
+            - sleep infinity
+          resources:
+            limits:
+              nvidia.com/gpu: "1"
+          volumeMounts:
+            - name: workspace
+              mountPath: /workspace
+            - name: shared
+              mountPath: /shared
+              readOnly: true
+      volumes:
+        - name: workspace
+          persistentVolumeClaim:
+            claimName: workspace
+        - name: shared
+          persistentVolumeClaim:
+            claimName: shared
+            readOnly: true

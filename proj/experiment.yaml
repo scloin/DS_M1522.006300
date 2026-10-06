@@ -1,0 +1,90 @@
+# Runs /workspace/test.py on eight GPUs.
+# NET_ADMIN is enabled for user-defined TC rules.
+apiVersion: v1
+kind: Service
+metadata:
+  name: experiment
+spec:
+  clusterIP: None
+  publishNotReadyAddresses: true
+  selector:
+    batch.kubernetes.io/job-name: experiment
+  ports:
+    - name: torch-master
+      port: 29500
+      targetPort: 29500
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: experiment
+spec:
+  completions: 8
+  parallelism: 8
+  completionMode: Indexed
+  backoffLimit: 0
+  activeDeadlineSeconds: 7200
+  template:
+    spec:
+      runtimeClassName: nvidia
+      subdomain: experiment
+      restartPolicy: Never
+      containers:
+        - name: worker
+          image: docker.io/pytorch/pytorch:2.4.1-cuda12.1-cudnn9-runtime
+          imagePullPolicy: IfNotPresent
+          workingDir: /workspace
+          securityContext:
+            capabilities:
+              add:
+              - NET_ADMIN
+          env:
+            - name: JOB_COMPLETION_INDEX
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.annotations['batch.kubernetes.io/job-completion-index']
+            - name: LOCAL_RANK
+              value: "0"
+            - name: NCCL_SOCKET_IFNAME
+              value: eth0
+            - name: NCCL_P2P_DISABLE
+              value: "1"
+            - name: NCCL_SHM_DISABLE
+              value: "1"
+            - name: NCCL_IB_DISABLE
+              value: "1"
+            - name: NCCL_NET
+              value: Socket
+            - name: GLOO_SOCKET_IFNAME
+              value: eth0
+          command:
+            - /bin/bash
+            - -lc
+            - |
+              set -euo pipefail
+              export RANK="$JOB_COMPLETION_INDEX"
+              export WORLD_SIZE=8
+              export MASTER_ADDR=experiment-0.experiment
+              export MASTER_PORT=29500
+              echo "rank=$RANK hostname=$(hostname) ip=$(hostname -i)"
+              exec python /workspace/test.py
+          ports:
+            - name: torch-master
+              containerPort: 29500
+          resources:
+            limits:
+              nvidia.com/gpu: "1"
+          volumeMounts:
+            - name: workspace
+              mountPath: /workspace
+            - name: shared
+              mountPath: /shared
+              readOnly: true
+      volumes:
+        - name: workspace
+          persistentVolumeClaim:
+            claimName: workspace
+        - name: shared
+          persistentVolumeClaim:
+            claimName: shared
+            readOnly: true
