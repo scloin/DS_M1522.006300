@@ -177,7 +177,7 @@
     `;
   };
 
-  fetch("./README.md")
+  fetch("./readme.md")
     .then(res => res.text())
     .then(text => {
       document.getElementById("readme").innerHTML = md.render(text);
